@@ -1,0 +1,23 @@
+body {
+    font-family: var(--main-text-style);
+    font-size: var(--main-font-size);
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+}
+
+/* Общее позиционирование секций */
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/* Заголовки секций*/
+.section-title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--secondary-text-color)
+}

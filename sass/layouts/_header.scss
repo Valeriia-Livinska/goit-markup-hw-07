@@ -1,0 +1,104 @@
+/*---- Секиця Header ----*/
+
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.header-container {
+    display: flex;
+}
+
+.header-logo {
+    margin-right: 93px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.nav__link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--secondary-text-color);
+
+    transition: color var(--transition-duration) var(--cubic-bezier);
+
+    &:hover,
+    &:focus {
+            color: var(--accent-color);
+        }
+
+    &--active {
+            color: var(--accent-color);
+        }
+    
+    &--active::after {
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+    
+            content: '';
+            display: block;
+    
+            width: 100%;
+            height: 4px;
+    
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+    
+}
+
+.header-contacts {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header-contacts__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.header-contacts__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--main-text-color);
+
+    transition: color var(--transition-duration) var(--cubic-bezier);
+
+    &:hover,
+    &:focus {
+            color: var(--accent-color);
+        }
+
+}
+
+/*Цвет иконок при hover-focus*/
+.header-contacts__icon {
+    margin-right: 10px;
+
+    fill: currentColor;
+}
