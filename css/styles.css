@@ -1,11 +1,11 @@
 :root {
-    
+
     /*text parameters*/
     --main-text-style: 'Roboto', sans-serif;
     --main-font-size: 14px;
     --main-text-color: #757575;
     --secondary-text-color: #212121;
-    
+
     /*background color*/
     --dark-bg: #2F303A;
     --light-bg: #F5F4FA;
@@ -16,7 +16,7 @@
 
     /*accent parameters*/
     --accent-color: #2196F3;
-    --accent-btn-hero-cl: #188CE8;
+    --accent-btn-color: #188CE8;
 
     /*css переходы*/
     --transition-duration: 250ms;
@@ -231,33 +231,43 @@ img {
     text-transform: uppercase;
 }
 
-.hero-btn {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 32px;
-    padding-left: 32px;
-    
+/* ---- Стили на кнопки ----- */
+
+.btn {
+    padding: 10px 32px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     min-width: 200px;
     height: 50px;
 
-    font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
     color: #FFFFFF;
-    
+
     background-color: var(--accent-color);
     cursor: pointer;
     border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 
-    transition: background-color var(--transition-duration) var(--cubic-bezier);
+    transition: background-color var(--transition-duration) var(--cubic-bezier),
+                box-shadow var(--transition-duration) var(--cubic-bezier);
 }
 
-.hero-btn:hover,
-.hero-btn:focus {
-    background-color: var(--accent-btn-hero-cl);
+.btn:hover,
+.btn:focus {
+    background-color: var(--accent-btn-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn {
+    font-weight: 700;
 }
 
 /*---- Modal ----*/
@@ -508,32 +518,7 @@ img {
 }
 
 .form-btn-send {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
     padding: 10px 55px;
-
-    min-width: 200px;
-    height: 50px;
-
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    color: #FFFFFF;
-
-    background-color: var(--accent-color);
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    
-    transition: background-color var(--transition-duration) var(--cubic-bezier),
-                box-shadow var(--transition-duration) var(--cubic-bezier);
-}
-
-.form-btn-send:hover,
-.form-btn-send:focus {
-    background-color: var(--accent-btn-hero-cl);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -915,8 +900,6 @@ img {
     border: 1px solid var(--accent-color);
 }
 
-
-
 .input-mail-subscribe::placeholder {
     font-size: 16px;
     line-height: 1.25;
@@ -925,37 +908,13 @@ img {
 }
 
 .btn-subscribe {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 29px;
-    padding-left: 29px;
-    
-    min-width: 200px;
-    height: 50px;
-       
-    background-color: var(--accent-color);
-    cursor: pointer;
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    
-    transition: background-color var(--transition-duration) var(--cubic-bezier);
-}
-
-.btn-subscribe:hover,
-.btn-subscribe:focus {
-    background-color: var(--accent-btn-hero-cl);
+    padding: 10px 29px;
 }
 
 .btn-subscribe-text {
     display: flex;
     align-items: center;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    text-align: center;
-    color: #FFFFFF;
 }
 
 .icon-subscribe {
@@ -968,6 +927,8 @@ img {
 /*=====================
     Вкладка Портфолио
   =====================*/
+
+
 
 /*---- Кнопки-фильтры ----*/ 
 .button-list {
