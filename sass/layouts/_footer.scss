@@ -139,15 +139,13 @@
     &:focus {
         border: 1px solid var(--accent-color);
     }
-}
 
-
-
-.input-mail-subscribe::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
+    &::placeholder {
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+        }
 }
 
 .btn-subscribe {
